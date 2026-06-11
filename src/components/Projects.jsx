@@ -6,10 +6,29 @@ const projects = [
     github: 'https://github.com/Aishascreations/brain-tumor-detection',
   },
   {
+    title: 'PollWave',
+    desc: 'Full-stack polling platform with real-time voting, live percentage result bars, and poll management. Built with React, FastAPI, and PostgreSQL — fully deployed and live.',
+    tags: ['React', 'FastAPI', 'PostgreSQL', 'JWT Auth', 'Python', 'Vercel'],
+    github: 'https://github.com/Aishascreations',
+    live: 'https://polling-app-rosy-five.vercel.app',
+  },
+  {
+    title: 'Istanbul Study Buddy',
+    desc: 'Full-stack platform for students in Istanbul to discover, rate and review study spots — libraries, cafes and co-working spaces. Features AI-powered recommendations via Claude, user reviews, saved spots, and a community-driven spot submission system.',
+    tags: ['React', 'Node.js', 'PostgreSQL', 'Claude AI', 'JWT Auth', 'REST API'],
+    github: 'https://github.com/Aishascreations/study-buddy',
+  },
+  {
     title: 'Recipely',
     desc: 'AI-powered recipe management app. Save recipes, get Claude AI suggestions based on fridge ingredients, and generate categorized shopping lists with a full REST API backend.',
     tags: ['Node.js', 'Express', 'SQLite', 'Claude AI', 'JWT Auth'],
     github: 'https://github.com/Aishascreations/recipe-app',
+  },
+  {
+    title: 'JobTrackr',
+    desc: 'Full-stack job application tracker with Kanban board, dashboard analytics, and AI cover letter generation. Built with React, Node.js, and PostgreSQL.',
+    tags: ['React', 'Node.js', 'PostgreSQL', 'Claude AI', 'Recharts', 'JWT Auth'],
+    github: 'https://github.com/Aishascreations/job-tracker',
   },
   {
     title: 'E-Commerce Platform',
@@ -29,12 +48,6 @@ const projects = [
     tags: ['Node.js', 'Express', 'SQLite', 'Markdown', 'REST API'],
     github: 'https://github.com/Aishascreations/notes-app',
   },
-  {
-  title: 'Istanbul Study Buddy',
-  desc: 'Full-stack platform for students in Istanbul to discover, rate and review study spots — libraries, cafes and co-working spaces. Features AI-powered recommendations via Claude, user reviews, saved spots, and a community-driven spot submission system.',
-  tags: ['React', 'Node.js', 'PostgreSQL', 'Claude AI', 'JWT Auth', 'REST API'],
-  github: 'https://github.com/Aishascreations/study-buddy',
-},
   {
     title: 'Deeds Communication Program',
     desc: 'Low-level hardware communication protocol implementing bidirectional handshaking and polling for embedded systems interfacing.',
@@ -107,15 +120,28 @@ export default function Projects() {
                 </div>
               </div>
 
-              <a href={p.github} target="_blank" rel="noreferrer" style={{
-                display: 'inline-flex', alignItems: 'center', gap: '6px',
-                fontSize: '13px', fontWeight: 600, color: '#0a0a0a',
-                padding: '10px 18px', background: '#f8f8f8',
-                border: '1px solid #e8e8e8', borderRadius: '99px',
-                whiteSpace: 'nowrap', textDecoration: 'none',
-              }}>
-                github ↗
-              </a>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <a href={p.github} target="_blank" rel="noreferrer" style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '6px',
+                  fontSize: '13px', fontWeight: 600, color: '#0a0a0a',
+                  padding: '10px 18px', background: '#f8f8f8',
+                  border: '1px solid #e8e8e8', borderRadius: '99px',
+                  whiteSpace: 'nowrap', textDecoration: 'none',
+                }}>
+                  github ↗
+                </a>
+                {p.live && (
+                  <a href={p.live} target="_blank" rel="noreferrer" style={{
+                    display: 'inline-flex', alignItems: 'center', gap: '6px',
+                    fontSize: '13px', fontWeight: 600,
+                    padding: '10px 18px', background: '#0a0a0a',
+                    color: '#fff', borderRadius: '99px',
+                    whiteSpace: 'nowrap', textDecoration: 'none',
+                  }}>
+                    live ↗
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
