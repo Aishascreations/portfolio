@@ -30,6 +30,12 @@ const projects = [
     github: 'https://github.com/Aishascreations/notes-app',
   },
   {
+  title: 'Istanbul Study Buddy',
+  desc: 'Full-stack platform for students in Istanbul to discover, rate and review study spots — libraries, cafes and co-working spaces. Features AI-powered recommendations via Claude, user reviews, saved spots, and a community-driven spot submission system.',
+  tags: ['React', 'Node.js', 'PostgreSQL', 'Claude AI', 'JWT Auth', 'REST API'],
+  github: 'https://github.com/Aishascreations/study-buddy',
+},
+  {
     title: 'Deeds Communication Program',
     desc: 'Low-level hardware communication protocol implementing bidirectional handshaking and polling for embedded systems interfacing.',
     tags: ['C', 'C++', 'Embedded Systems', 'Hardware Interfacing'],
